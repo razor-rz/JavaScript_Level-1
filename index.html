@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript. Уровень 1</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <button onclick="task1 ()">1 задание</button>
+    <button onclick="task2 ()">2 задание</button>
+    <button onclick="task3 ()">3 задание</button>
+    <script>
+    function task1 () {
+        var celsius = prompt('Укажите температуру в градусах цельсия')
+        var fahrenheit = (9/5) * celsius + 32
+        console.log (fahrenheit)
+    }
+    
+    function task2 () {
+        var name = 'Василий'
+        var admin = name
+        console.log (admin)
+    }
+        
+    function task3 () {
+        console.log (1000 + '108')
+    }
+    </script>
+</body>
+</html>
