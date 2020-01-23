@@ -1,30 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>JavaScript. Уровень 1</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
-    <button onclick="task1 ()">1 задание</button>
-    <button onclick="task2 ()">2 задание</button>
-    <button onclick="task3 ()">3 задание</button>
+    <h1>II</h1>
+    <button onclick="task1()">1 задание</button>
+    <button onclick="task2()">2 задание</button>
+    <button onclick="task3()">3 задание</button>
+    <button onclick="task4()">4 задание</button>
+    <button onclick="task5()">5-6 задание</button>
+    <button onclick="task7()">7 задание</button>
+    <button onclick="task8()">8 задание</button>
     <script>
-    function task1 () {
-        var celsius = prompt('Укажите температуру в градусах цельсия')
-        var fahrenheit = (9/5) * celsius + 32
-        console.log (fahrenheit)
-    }
-    
-    function task2 () {
-        var name = 'Василий'
-        var admin = name
-        console.log (admin)
-    }
-        
-    function task3 () {
-        console.log (1000 + '108')
-    }
+        function task1() {
+            var a = 1,
+                b = 1,
+                c, d;
+            c = ++a;
+            console.log('Сначала к a прибавляется 1, a становится 2 и 2 присваивается к c, поэтому: ' + c); // 2
+            d = b++;
+            console.log('Сначала к d присваивается 1, а затем к b прибавляется 1 , поэтому: ' + d); // 1
+            c = (2 + ++a);
+            console.log('a уже имеет значение 2, затем префиксный инкремент присваивает 3, поэтому: ' + c); // 5
+            d = (2 + b++);
+            console.log('b уже имеет значение 2, постфиксный инкремент оставляет значение 2, но само b принимает значение 3  поэтому: ' + d); // 4
+            console.log('значение остается с 3 примера: ' + a); // 3
+            console.log('значение остается с 4 примера: ' + b); // 3
+        }
+
+        function task2() {
+            var a = 2
+            var x = 1 + (a *= 2)
+            console.log('*= 2 приумножает a на 2, получается 4, затем прибавляем 1 и получаем: ' + x)
+        }
+
+        function task3() {
+            var a = -1
+            var b = 2
+            if (a >= 0 && b >= 0) {
+                console.log(a - b)
+            } else if (a < 0 && b < 0) {
+                console.log(a * b)
+            } else if ((a >= 0 && b < 0) || (a < 0 && b >= 0)) {
+                console.log(a + b)
+            }
+        }
+
+        function task4() {
+            var a = 11
+            switch (a) {
+                case 11:
+                    console.log(a++)
+                case 12:
+                    console.log(a++)
+                case 13:
+                    console.log(a++)
+                case 14:
+                    console.log(a++)
+                case 15:
+                    console.log(a++)
+                    break
+            }
+        }
+
+        function task5() {
+            function multiplication(x, y) {
+                return x * y
+            }
+            console.log(multiplication(6, 6))
+
+            function sum(x, y) {
+                return x + y
+            }
+            console.log(sum(6, 6))
+
+            function difference(x, y) {
+                return x - y
+            }
+            console.log(difference(6, 6))
+
+            function division(x, y) {
+                return x / y
+            }
+            console.log(division(6, 6))
+
+            function mathOperation(arg1, arg2, operation) {
+                switch (operation) {
+                    case 'multiplication':
+                        return multiplication(arg1, arg2);
+                    case 'sum':
+                        return sum(arg1, arg2);
+                    case 'difference':
+                        return difference(arg1, arg2);
+                    case 'division':
+                        return division(arg1, arg2);
+                }
+            }
+            console.log(mathOperation(7, 7, 'multiplication'))
+            console.log(mathOperation(7, 7, 'sum'))
+            console.log(mathOperation(7, 7, 'difference'))
+            console.log(mathOperation(7, 7, 'division'))
+        }
+
+        function task7() {
+            console.log(null == 0)
+            // Значения null и undefined равны друг другу, но не чему бы то ни было еще. Это жесткое правило прописано в спецификации языка
+        }
+
+        function task8() {
+            function power(val, pow) {
+                if (pow == 1) {
+                    return val
+                } else {
+                    return val * power(val, --pow)
+                }
+            }
+            console.log(power(3, 3))
+        }
+
     </script>
 </body>
+
 </html>
