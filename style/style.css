@@ -1,3 +1,11 @@
+h1 {
+    text-align: center;
+    margin: 0 ;
+    background-color: #ccc;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.5);
+    font-size: 25px;
+}
+
 button {
     color: #fff;
     border-radius: 26px;
@@ -9,10 +17,12 @@ button {
     margin: 10px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.5);
 }
+
 button:hover {
     background-color: #47BD75;
     box-shadow: 0 3px 8px rgba(0,0,0,0.2);
 }
+
 button:active {
     background-color: #5A7765;
     outline: none;
