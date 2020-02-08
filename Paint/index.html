@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Paint</title>
+</head>
+
+<body>
+    <div id="paint">
+        <div class="tools">
+            <button name="tool-button" data-name='pencil'>Pencil</button>
+            <button name="tool-button" data-name='brush'>Brush</button>
+            <button name="tool-button" data-name='circle'>Circle</button>
+            <button name="tool-button" data-name='ellipse'>Ellipse</button>
+            <button name="tool-button" data-name='eraser'>Eraser</button>
+            <button name="tool-button" data-name='gradient'>Gradient</button>
+            <button onclick="clear()" name="tool-button" data-name='clear' id="clear" >Clear</button>
+
+            <input type="range" name="input-obj" data-name="size" min="5" max="60" step="5" value="5">   
+               
+    <!--    <select name="input-obj" data-name="size">
+            </select>                                    -->
+
+
+            <input type="color" name="input-obj" data-name="color">
+
+            <div class="coordinates">
+                <p id="x"><b>x: </b> <span id="x-coord"></span></p>
+                <p id="y"><b>y: </b> <span id="y-coord"></span></p>
+                <br>
+            </div>
+
+
+        </div>
+        <div class="canv">
+            <canvas id="canv" width="1000" height="800"></canvas>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body></html>

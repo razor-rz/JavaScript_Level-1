@@ -1,0 +1,61 @@
+#paint {
+    display: flex;
+    flex-direction: row;
+}
+
+.tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 40px;
+}
+
+.coordinates {
+    display: flex;
+    flex-direction: column;  
+}
+
+#canv {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    height: 800px;
+    width: 1000px;
+}
+
+
+button {
+    border: none;
+    padding: 8px 16px;
+    background-color: #f55;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #f66;
+}
+
+button:active {
+    background-color: #ddd;
+    outline: none;
+}
+
+button:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+input[type=color] {
+    height: 30px;
+    width: 130px;
+    border: none;
+    background-color: transparent;
+}
+
+input[type=color]:hover {
+    background-color: #ccc;        
+}
+
+input[type=color]:focus {
+    background-color: #156;
+    outline: none;
+}
