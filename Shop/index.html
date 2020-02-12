@@ -12,16 +12,21 @@
 <body>
     <header>
         <span class="logo">E-SHOP</span>
-        <button class="btn-cart">Корзина</button>
-        <div class="cart">
- <!--       <div class="cart-product">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="товар" class="cart-product-img" width="100" height="80">
-            <span class="cart-product-name">Notedook</span>
-            <span class="cart-product-quantity">Quantity:</span>
-            <span class="cart-each-quantity">each</span>
-            <span class="cart-price">2000</span>
-            <button class="cart-btn-del">X</button>            
-           </div>   --> 
+        <button class="btn-cart" id="toggle-cart" type="button">Корзина</button>
+        <div class="cart-block invisible">
+            <div>
+                <b class="total-cost">Общая стоимост:</b><span id="tot-sum"></span>
+            </div>
+            <hr>
+            <div class="cart-items">
+                <div class="cart-item" data-id="${this.id_product}">
+                </div> 
+            </div>
+            <hr>
+            <div>
+                <b class="total-qua">Количество:</b><span id="tot-qua"></span>
+            </div>
+
         </div>
         <form action="#">
             <label>
@@ -31,16 +36,7 @@
         </form>
     </header>
     <div class="main">
- <!--       <div class="product">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="товар" class="product-img">
-            <div class="product-inf">
-                <span class="product-name">Notedook</span>
-                <span class="product-price">200$</span>
-                <button class="buy-btn">Купить</button>
-            </div>
-        </div>        -->
     </div>
-
 
     <script src="js/main.js"></script>
 </body></html>
